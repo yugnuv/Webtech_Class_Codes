@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subtraction Frame</title>
+    <script>
+        function calculateSubtraction() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var result = num1 - num2;
+            alert("Result (a - b): " + result);
+        }
+    </script>
+</head>
+<body>
+    <h3>Subtraction</h3>
+
+    <label>First Number (a): </label>
+    <input type="text" id="num1"><br><br>
+
+    <label>Second Number (b): </label>
+    <input type="text" id="num2"><br><br>
+
+    <input type="button" value="Subtract" onclick="calculateSubtraction();" style="padding:15px; background-color:rgb(250, 250, 250);border-color:rgb(0, 255, 8) ; border-radius:12px;">
+</body>
+</html>
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0px;
+        }
+        #grad1 {
+            height: 1000px;
+            background-image: linear-gradient(red, yellow);
+            padding: 100px 200px;
+        }
+        .header {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 30px;
+        }
+        .title1, .two, .three, .four, .five {
+            font-size: 20px;
+            padding-top: 15px;
+        }
+        .tbox {
+            font-size: 18px;
+            background-color: #D3D3D3;
+            width: 300px;
+            padding: 5px;
+            border: 1px solid #D3D3D3;
+            padding-left: 10px;
+			margin-top: 10px;
+        }
+        .tbox:hover {
+            border: 1px solid blue;
+        }
+        .tbox:focus {
+            box-shadow: 0 0 2px 3px blue;
+            background-color: white;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background-color: darkblue;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var fullname = document.getElementById("txtfullname");
+            var username = document.getElementById("txtusername");
+            var email = document.getElementById("txtmail");
+            var phone = document.getElementById("txtnum");
+            var password = document.getElementById("txtpassword");
+            var confirmPassword = document.getElementById("txtconfirmpassword");
+            var gender = document.querySelector('input[name="gender"]:checked');
+
+            if (fullname.value.trim() === "") {
+                alert("Please enter your Full Name.");
+                fullname.focus();
+                return false;
+            }
+            if (username.value.trim() === "") {
+                alert("Please enter your Username.");
+                username.focus();
+                return false;
+            }
+            if (email.value.trim() === "" || !email.value.includes("@")) {
+                alert("Please enter a valid Email.");
+                email.focus();
+                return false;
+            }
+            if (phone.value.trim() === "" || isNaN(phone.value) || phone.value.length < 10) {
+                alert("Please enter a valid Phone Number.");
+                phone.focus();
+                return false;
+            }
+            if (password.value.trim() === "") {
+                alert("Please enter a Password.");
+                password.focus();
+                return false;
+            }
+            if (confirmPassword.value.trim() === "" || password.value !== confirmPassword.value) {
+                alert("Passwords do not match.");
+                confirmPassword.focus();
+                return false;
+            }
+            if (!gender) {
+                alert("Please select your Gender.");
+                return false;
+            }
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div id="grad1">
+        <div class="header">
+            <h2>Registration</h2>
+            <form onsubmit="return validateForm();">
+                <div class="title1">
+                    <label>Full Name:</label>
+                    <input type="text" class="tbox" id="txtfullname" placeholder="Enter name" />
+                    <br>
+                    <label>User Name:</label>
+                    <input type="text" class="tbox" id="txtusername" placeholder="Enter username" />
+                </div>
+                <div class="two">
+                    <label>Email:</label>
+                    <input type="text" class="tbox" id="txtmail" placeholder="Enter Email" />
+                    <br>
+                    <label>Phone Number:</label>
+                    <input type="text" class="tbox" id="txtnum" placeholder="Enter Phone no." />
+                </div>
+                <div class="three">
+                    <label>Password:</label>
+                    <input type="password" class="tbox" id="txtpassword" placeholder="Enter Password" />
+                    <br>
+                    <label>Confirm Password:</label>
+                    <input type="password" class="tbox" id="txtconfirmpassword" placeholder="Confirm Password" />
+                </div>
+                <div class="four">
+                    <label>Gender:</label>
+                    <br>
+                    <input type="radio" name="gender" value="Male" /> Male
+                    <input type="radio" name="gender" value="Female" /> Female
+                    <input type="radio" name="gender" value="Other" /> Other
+                </div>
+                <input type="submit" class="btn" value="Submit" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Frame</title>
+    <script>
+        function calculateProduct() {
+            var num1 = parseInt(document.getElementById("num1").value);
+            var num2 = parseInt(document.getElementById("num2").value);
+            var result = num1 * num2;
+
+            alert("Multiplication Result: " + result);
+        }
+    </script>
+</head>
+<body>
+    <h3>Multiplication</h3>
+
+    <label>Number A: </label>
+    <input type="text" id="num1"><br><br>
+
+    <label>Number B: </label>
+    <input type="text" id="num2"><br><br>
+
+    <input type="button" value="Multiply" onclick="calculateProduct();" style="padding:15px; background-color:#d0f0c0; border:2px solid green; border-radius:10px; font-family:Arial;">
+</body>
+</html>

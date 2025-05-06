@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show() {
+			
+			var a = parseInt(document.getElementById("inputA").value);
+			var b = parseInt(document.getElementById("inputB").value);			
+			var sum = a + b;
+
+			alert("Sum of a and b is: " + sum);
+		}
+	</script>
+</head>
+<body>
+    <h3>Addition</h3>
+	<br>
+	
+	<label for="inputA">Enter the first number (a): </label>
+	<input type="text" id="inputA"><br><br>
+
+	<label for="inputB">Enter the second number (b): </label>
+	<input type="text" id="inputB"><br><br>
+
+	
+	<input type="submit" style="height:100px; border-color:rgb(0, 255, 8); border-radius:10px; font-family: sans-serif;" value="Get Sum" onclick="show();">
+</body>
+</html>

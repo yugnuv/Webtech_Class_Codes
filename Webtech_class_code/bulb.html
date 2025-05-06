@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb Toggle</title>
+    <link rel="stylesheet" href="bulb.css"> 
+</head>
+<body>
+    <div class="container">
+        <div class="bulb"></div>
+        <button id="btn" onclick="toggleLight()">Toggle Light</button>
+    </div>
+</body>
+<script>
+    function toggleLight() {
+        var bulb = document.querySelector(".bulb");
+        if (bulb.style.backgroundColor === "yellow") {
+            bulb.style.backgroundColor = "var(--light-color)";
+        } else {
+            bulb.style.backgroundColor = "yellow"; 
+        }
+    }
+</script>
+</html>

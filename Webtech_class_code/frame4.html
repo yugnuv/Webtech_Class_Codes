@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		function show() {
+			
+			var a = parseInt(document.getElementById("inputA").value);
+			var b = parseInt(document.getElementById("inputB").value);			
+			var div = a / b;
+
+			alert("div of a and b is: " + div);
+		}
+	</script>
+</head>
+<body>
+    <h3>Division</h3>
+	<br>
+	
+	<label for="inputA">Enter the first number (a): </label>
+	<input type="text" id="inputA"><br><br>
+
+	<label for="inputB">Enter the second number (b): </label>
+	<input type="text" id="inputB"><br><br>
+
+	
+	<input type="submit" style="height:80px; border-color:rgb(0, 255, 60); border-radius:10px; font-family: cursive;" value="Get Division" onclick="show();">
+</body>
+</html>
